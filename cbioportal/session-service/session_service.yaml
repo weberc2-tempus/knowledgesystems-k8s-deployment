@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
@@ -8,7 +8,7 @@ metadata:
   labels:
     run: cbioportal-session-service
   name: cbioportal-session-service
-  selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/cbioportal-session-service
+  selfLink: /apis/apps/v1/namespaces/default/deployments/cbioportal-session-service
 spec:
   replicas: 2
   selector:
@@ -30,13 +30,13 @@ spec:
         - name: SERVER_PORT
           value: "8888"
         - name: MONGODB_ROOT_PASSWORD
-          valueFrom: 
+          valueFrom:
             secretKeyRef:
               name: cbioportal-session-service-mongo-mongodb
               key: mongodb-root-password
-        envFrom:
-          - configMapRef:
-              name: cbioportal-session-service-user-credentials
+        # envFrom:
+        #   - configMapRef:
+        #       name: cbioportal-session-service-user-credentials
         image: cbioportal/session-service:0.3.0
         command: ["java"]
         args: [

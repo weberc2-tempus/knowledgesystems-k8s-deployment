@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
@@ -8,7 +8,7 @@ metadata:
   labels:
     run: cbioportal-backend-genie-public
   name: cbioportal-backend-genie-public
-  selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/cbioportal-backend-genie-public
+  selfLink: /apis/apps/v1/namespaces/default/deployments/cbioportal-backend-genie-public
 spec:
   replicas: 2
   selector:

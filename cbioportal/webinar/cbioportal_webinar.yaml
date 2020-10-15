@@ -1,5 +1,5 @@
 # Temp instance to use during workshops
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
@@ -9,7 +9,7 @@ metadata:
   labels:
     run: cbioportal-webinar
   name: cbioportal-webinar
-  selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/cbioportal-webinar
+  selfLink: /apis/apps/v1/namespaces/default/deployments/cbioportal-webinar
 spec:
   replicas: 3
   selector:

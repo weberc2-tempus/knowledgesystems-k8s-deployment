@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
@@ -8,7 +8,7 @@ metadata:
   labels:
     run: cbioportal-redis-cache
   name: cbioportal-redis-cache
-  selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/cbioportal-redis-cache
+  selfLink: /apis/apps/v1/namespaces/default/deployments/cbioportal-redis-cache
 spec:
   replicas: 1
   selector:

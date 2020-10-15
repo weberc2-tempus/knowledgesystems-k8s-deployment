@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
@@ -8,7 +8,7 @@ metadata:
   labels:
     run: cbioportal-session-service-beta
   name: cbioportal-session-service-beta
-  selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/cbioportal-session-service-beta
+  selfLink: /apis/apps/v1/namespaces/default/deployments/cbioportal-session-service-beta
 spec:
   replicas: 1
   selector:

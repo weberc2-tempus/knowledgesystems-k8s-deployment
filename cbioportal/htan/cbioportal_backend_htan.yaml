@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
@@ -8,7 +8,7 @@ metadata:
   labels:
     run: cbioportal-backend-htan
   name: cbioportal-backend-htan
-  selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/cbioportal-backend-htan
+  selfLink: /apis/apps/v1/namespaces/default/deployments/cbioportal-backend-htan
 spec:
   replicas: 2
   selector:
